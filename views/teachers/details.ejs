@@ -1,0 +1,12 @@
+<% include('../layout') %>
+
+<h2>Teacher Details</h2>
+
+<ul>
+  <li><strong>Name:</strong> <%= teacher.name %></li>
+  <li><strong>Employee ID:</strong> <%= teacher.employeeId %></li>
+  <li><strong>Subject:</strong> <%= teacher.subject || 'N/A' %></li>
+  <li><strong>Experience:</strong> <%= teacher.yearsOfExperience || 'N/A' %> years</li>
+</ul>
+
+<a href="/teachers">Back to list</a>

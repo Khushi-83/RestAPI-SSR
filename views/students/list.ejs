@@ -1,0 +1,24 @@
+<% include('../layout') %>
+<h2>Students</h2>
+<a href="/students/new">Add New Student</a>
+<table>
+  <thead>
+    <tr><th>Name</th><th>Roll</th><th>Class</th><th>Actions</th></tr>
+  </thead>
+  <tbody>
+    <% students.forEach(function(s){ %>
+      <tr>
+        <td><%= s.name %></td>
+        <td><%= s.rollNo %></td>
+        <td><%= s.class || '-' %></td>
+        <td>
+          <a href="/students/<%= s._id %>">View</a> |
+          <a href="/students/<%= s._id %>/edit">Edit</a> |
+          <form action="/students/<%= s._id %>?_method=DELETE" method="POST" style="display:inline">
+            <button type="submit" onclick="return confirm('Delete?')">Delete</button>
+          </form>
+        </td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>

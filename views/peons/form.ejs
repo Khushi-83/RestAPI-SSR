@@ -1,0 +1,24 @@
+<% include('../layout') %>
+
+<h2><%= title %></h2>
+
+<form action="<%= action %>" method="POST">
+
+  <label>Name:
+    <input type="text" name="name" value="<%= peon.name || '' %>" required>
+  </label><br/>
+
+  <label>Employee ID:
+    <input type="text" name="employeeId" value="<%= peon.employeeId || '' %>" required>
+  </label><br/>
+
+  <label>Duty:
+    <input type="text" name="duty" value="<%= peon.duty || '' %>">
+  </label><br/>
+
+  <label>Shift:
+    <input type="text" name="shift" value="<%= peon.shift || '' %>">
+  </label><br/>
+
+  <button type="submit">Save</button>
+</form>

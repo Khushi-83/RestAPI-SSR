@@ -1,0 +1,36 @@
+<% include('../layout') %>
+
+<h2>Peons</h2>
+
+<a href="/peons/new">Add New Peon</a>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Employee ID</th>
+      <th>Duty</th>
+      <th>Shift</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% peons.forEach(function(p){ %>
+      <tr>
+        <td><%= p.name %></td>
+        <td><%= p.employeeId %></td>
+        <td><%= p.duty || '-' %></td>
+        <td><%= p.shift || '-' %></td>
+
+        <td>
+          <a href="/peons/<%= p._id %>">View</a> |
+          <a href="/peons/<%= p._id %>/edit">Edit</a> |
+          <form action="/peons/<%= p._id %>?_method=DELETE" method="POST" style="display:inline;">
+            <button type="submit" onclick="return confirm('Delete?')">Delete</button>
+          </form>
+        </td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>

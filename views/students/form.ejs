@@ -1,0 +1,11 @@
+<% include('../layout') %>
+<h2><%= title %></h2>
+
+<form action="<%= action %>" method="POST">
+  <label>Name: <input type="text" name="name" value="<%= student.name || '' %>" required></label><br/>
+  <label>Roll No: <input type="text" name="rollNo" value="<%= student.rollNo || '' %>" required></label><br/>
+  <label>Age: <input type="number" name="age" value="<%= student.age || '' %>"></label><br/>
+  <label>Class: <input type="text" name="class" value="<%= student.class || '' %>"></label><br/>
+  <label>Section: <input type="text" name="section" value="<%= student.section || '' %>"></label><br/>
+  <button type="submit">Save</button>
+</form>

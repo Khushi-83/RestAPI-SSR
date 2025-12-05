@@ -1,0 +1,24 @@
+<% include('../layout') %>
+
+<h2><%= title %></h2>
+
+<form action="<%= action %>" method="POST">
+
+  <label>Name:
+    <input type="text" name="name" value="<%= teacher.name || '' %>" required>
+  </label><br/>
+
+  <label>Employee ID:
+    <input type="text" name="employeeId" value="<%= teacher.employeeId || '' %>" required>
+  </label><br/>
+
+  <label>Subject:
+    <input type="text" name="subject" value="<%= teacher.subject || '' %>">
+  </label><br/>
+
+  <label>Years of Experience:
+    <input type="number" name="yearsOfExperience" value="<%= teacher.yearsOfExperience || '' %>">
+  </label><br/>
+
+  <button type="submit">Save</button>
+</form>
