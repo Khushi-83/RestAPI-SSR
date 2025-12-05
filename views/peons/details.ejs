@@ -1,4 +1,4 @@
-<% include('../layout') %>
+<%- include('../partials/header') %>
 
 <h2>Peon Details</h2>
 
@@ -9,4 +9,6 @@
   <li><strong>Shift:</strong> <%= peon.shift || 'N/A' %></li>
 </ul>
 
-<a href="/peons">Back to list</a>
+<a href="/peons">Back</a>
+
+<%- include('../partials/footer') %>

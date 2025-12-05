@@ -1,10 +1,15 @@
-<% include('../layout') %>
+<%- include('../partials/header') %>
+
 <h2>Student Details</h2>
+
 <ul>
-  <li>Name: <%= student.name %></li>
-  <li>Roll: <%= student.rollNo %></li>
-  <li>Age: <%= student.age || 'N/A' %></li>
-  <li>Class: <%= student.class || 'N/A' %></li>
-  <li>Section: <%= student.section || 'N/A' %></li>
+  <li><strong>Name:</strong> <%= student.name %></li>
+  <li><strong>Roll No:</strong> <%= student.rollNo %></li>
+  <li><strong>Age:</strong> <%= student.age || 'N/A' %></li>
+  <li><strong>Class:</strong> <%= student.class || 'N/A' %></li>
+  <li><strong>Section:</strong> <%= student.section || 'N/A' %></li>
 </ul>
-<a href="/students">Back to list</a>
+
+<a href="/students">Back</a>
+
+<%- include('../partials/footer') %>

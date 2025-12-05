@@ -1,7 +1,6 @@
-<% include('../layout') %>
+<%- include('../partials/header') %>
 
 <h2>Teachers</h2>
-
 <a href="/teachers/new">Add New Teacher</a>
 
 <table>
@@ -14,8 +13,9 @@
       <th>Actions</th>
     </tr>
   </thead>
+
   <tbody>
-    <% teachers.forEach(function(t){ %>
+    <% teachers.forEach(t => { %>
       <tr>
         <td><%= t.name %></td>
         <td><%= t.employeeId %></td>
@@ -25,10 +25,12 @@
           <a href="/teachers/<%= t._id %>">View</a> |
           <a href="/teachers/<%= t._id %>/edit">Edit</a> |
           <form action="/teachers/<%= t._id %>?_method=DELETE" method="POST" style="display:inline;">
-            <button type="submit" onclick="return confirm('Delete?')">Delete</button>
+            <button onclick="return confirm('Delete teacher?')">Delete</button>
           </form>
         </td>
       </tr>
     <% }) %>
   </tbody>
 </table>
+
+<%- include('../partials/footer') %>

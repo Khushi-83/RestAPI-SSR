@@ -1,4 +1,4 @@
-<% include('../layout') %>
+<%- include('../partials/header') %>
 
 <h2>Teacher Details</h2>
 
@@ -9,4 +9,6 @@
   <li><strong>Experience:</strong> <%= teacher.yearsOfExperience || 'N/A' %> years</li>
 </ul>
 
-<a href="/teachers">Back to list</a>
+<a href="/teachers">Back</a>
+
+<%- include('../partials/footer') %>
